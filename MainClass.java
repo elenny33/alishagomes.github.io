@@ -1,14 +1,9 @@
-/*
-Written by: Alisha, Elenny, Aryan
-If you are not us, go away! 
-*/
-
-//need to know how to access a class when the user picks an option 
-
 import java.util.Scanner;
 import java.awt.Graphics;
-public class MainClass 
+
+public class MainClass extends TaskTimer
 {
+
 
 	public static void main(String[] args) 
 	{
@@ -30,6 +25,7 @@ public class MainClass
 		System.out.println("_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________");
 		System.out.println(" ");
 		System.out.println(" ");
+		System.out.println("Type exit to go back to the home screen "); 
 		System.out.println("   ___    __                                    _         __                          _      \n" + 
 				"  / _ \\  / / ___  ___ _  ___ ___         ___   (_) ____  / /__      ___   ___  ___   (_)     \n" + 
 				" / ___/ / / / -_)/ _ `/ (_-</ -_)       / _ \\ / / / __/ /  '_/     / _ \\ / _ \\/ -_) _        \n" + 
@@ -66,6 +62,7 @@ public class MainClass
 			
 		}else if (str.equals("TaskTimer")|| str.equals("tasktimer"))
 		{
+			TaskTimer.main(null);
 			
 		}else if (str.equals("Calender")|| str.equals("calender"))
 		{
@@ -90,6 +87,9 @@ public class MainClass
 				}
 				}
 		}
+		
+		
+		
 	}
 
 }
