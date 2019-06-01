@@ -26,10 +26,12 @@ public class HelpStudent
 		System.out.println("Please pick one: ");
 		System.out.println("1: RANDOM MOTIVATIONAL QUOTE ");
 		System.out.println("2: TIME MANAGEMENT TIPS");
-		System.out.println("3: STUDENT-COMPUTER CONVERSATION ");
+		System.out.println("3: TALK TO AN EXPERT ");
+		System.out.println("4. MAIN MENU");
 		
 		Scanner scan = new Scanner (System.in);
 		int scan1 = scan.nextInt();
+		
 		
 		if(scan1==1)
 		{
@@ -40,8 +42,14 @@ public class HelpStudent
 		}else if (scan1==3)
 		{
 			convo(); 
-		}else {
+		}else if (scan1 ==4)
+		{
+			MainClass.main(null);
+		}
+		
+		else {
 			System.out.println("Not valid number. Please try again");
+			HelpStudent.main(null);
 		}
 
 	}
@@ -49,8 +57,8 @@ public class HelpStudent
 	public static void motivationalQuote ()
 	{
 		
-		String [] quotes = {"Don’t let what you cannot do interfere with what you can do. – John Wooden"
-				+ "Successful and unsuccessful people do not vary greatly in their abilities. They vary in their desires to reach their potential. - John Maxwell",
+		String [] quotes = {"Don’t let what you cannot do interfere with what you can do. – John Wooden",
+				"Successful and unsuccessful people do not vary greatly in their abilities. They vary in their desires to reach their potential. - John Maxwell",
 				"Strive for progress, not perfection - Unknown" ,
 				"There are no shortcuts to any place worth going. - Beverly Sills",
 				"Failure is the opprotunity to begin again more intelligently. - Henry Ford",
@@ -167,9 +175,64 @@ public class HelpStudent
 	}
 	public static void convo ()
 	{
+		System.out.println("____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________");
+		System.out.println("TALK TO AN EXPERT: ");
+		
+		System.out.println("Hello! You are talking to a time management expert. Let's chat! ");
+		System.out.println(""); 
+		System.out.println("Expert: Complete this sentence: I am bad at time management because ___________");
+		System.out.println(""); 
+		System.out.println("1. I get distracted often");
+		System.out.println("2. I get overwhelmed"); 
+		System.out.println("3. I don't understand my work"); 
+		System.out.println("4. I am unorganized"); 
+		System.out.println("5. I am unmotivated"); 
+		Scanner scan4 = new Scanner (System.in);
+		int scan = scan4.nextInt();
+		if (scan ==1)
+		{
+			System.out.println("Turn off notifications on your tablet and phone\n" + 
+					"\n" + 
+					"Do this and say goodbye to all the interruptions you’ve been getting when you were supposed to be focusing on your schoolwork.\n" + 
+					"\n" + 
+					"This tip alone will make you a much more productive student."); 
+			System.out.println("");
+			
+		
+		}else if (scan ==2)
+		{
+			System.out.println("Many students overestimate what they can accomplish each day. When they don’t manage to complete everything they intended to, they get discouraged and lose motivation.\n" + 
+					"\n" + 
+					"So be realistic when you plan your day, and assume that there will be a few unforeseen interruptions."); 
+			System.out.println("Finish every homework assignment at least one to two days before it’s due\n" + 
+					"\n" + 
+					"In this way, you’ll have time to check through your work thoroughly.\n" + 
+					"\n" + 
+					"And just in case something urgent pops up at the last minute, you’ll still be able to complete the assignment on time.");
+		}else if (scan==3)
+		{
+			System.out.println("If you don’t understand a new concept, speak to your teacher right away\n" + 
+					"\n" + 
+					"If you do this, you’ll save a lot of time in the long run, because you’ll be clarifying your doubts as they arise."); 
+		}else if (scan==4)
+		{
+			System.out.println("Keep an ongoing list of every single thing you have to do\n" + 
+					"\n" + 
+					"Don’t rely on your brain as a storage device.\n" + 
+					"\n" + 
+					"Instead, write down every single thing you need to do: assignments, projects, errands, etc.\n" + 
+					"\n" + 
+					"Review the list daily to ensure that you’re working on the most important task at any given time."); 
+		}else if (scan==5)
+		{
+			System.out.println("If you don’t feel like doing work, set a timer for two minutes. Then tell yourself that you just need to focus for that amount of time.\n" + 
+					"\n" + 
+					"Chances are that once you’ve started work, you’ll continue even after the two minutes are up."); 
+		}else {
+			System.out.println("Invalid input. Please try again."); 
+			HelpStudent.main(null);
+		}
 		
 	}
 	
-
-
 }
